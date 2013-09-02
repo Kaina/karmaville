@@ -11,12 +11,12 @@ gem 'jquery-rails'
 group :development do
   gem 'quiet_assets'
   gem 'activerecord-import'
+  gem 'rack-mini-profiler'
 end
 
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'rack-mini-profiler'
 end
 
 group :test do

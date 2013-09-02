@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(:version => 20130902193052) do
   end
 
   add_index "karma_points", ["user_id"], :name => "index_karma_points_on_user_id"
-  add_index "karma_points", ["value"], :name => "index_karma_points_on_value"
 
   create_table "users", :force => true do |t|
     t.string   "first_name",               :null => false
