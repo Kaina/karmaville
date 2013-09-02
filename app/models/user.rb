@@ -29,5 +29,5 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
-  scope :by_karma, -> { order("sum_karma DESC").limit(50) }
+  scope :by_karma, -> { order("sum_karma DESC").limit(100) }
 end
