@@ -9,7 +9,6 @@ class KarmaPoint < ActiveRecord::Base
   after_save :set_sum_karma
 
   def set_sum_karma
-    self.user.sum_karma = self.user.total_karma
-    self.user.save
+    self.user.update_attribute(:sum_karma, self.user.total_karma_model_save)
   end
 end

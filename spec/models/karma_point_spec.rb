@@ -15,7 +15,7 @@ describe KarmaPoint do
   end
 
   describe '#save' do
-    let(:user) { create(:user) }
+    let(:user) { create(:user_with_karma) }
 
     it "increments the user's total_karma by the value of the karma point" do
       expect {

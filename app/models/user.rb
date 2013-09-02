@@ -17,16 +17,17 @@ class User < ActiveRecord::Base
             :format => {:with => /^[\w+\-.]+@[a-z\d\-.]+\.[a-z]+$/i},
             :uniqueness => {:case_sensitive => false}
 
-  def self.by_karma
-    self.order('sum_karma DESC')
+  def total_karma_model_save
+    self.karma_points.sum(:value)
   end
 
   def total_karma
-    self.karma_points.sum(:value)
+    self.sum_karma
   end
 
   def full_name
     "#{first_name} #{last_name}"
   end
 
+  scope :by_karma, -> { order("sum_karma DESC").limit(50) }
 end
