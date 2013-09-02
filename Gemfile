@@ -16,6 +16,7 @@ end
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'rack-mini-profiler'
 end
 
 group :test do
