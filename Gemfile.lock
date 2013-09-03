@@ -39,6 +39,7 @@ GEM
       mocha (= 0.12.7)
     builder (3.0.4)
     daemons (1.1.9)
+    dalli (2.6.4)
     diff-lcs (1.2.1)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -147,6 +148,7 @@ DEPENDENCIES
   activerecord-import
   bcrypt-ruby
   bootstrap-sass (~> 2.3.1.0)
+  dalli
   factory_girl_rails
   faker
   jquery-rails

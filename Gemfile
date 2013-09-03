@@ -8,6 +8,8 @@ gem 'bcrypt-ruby'
 gem 'pg'
 gem 'jquery-rails'
 
+gem 'dalli'
+
 group :development do
   gem 'quiet_assets'
   gem 'activerecord-import'
